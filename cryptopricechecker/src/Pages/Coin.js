@@ -40,7 +40,9 @@ const Coin = () => {
             <h3>Search crypto prices</h3>
             <Form>
             <Form.Group className="mb-3">
-            <Form.Control type="text" 
+            <Form.Control 
+            className= "bg-dark text-white"
+            type="text" 
             placeholder="Enter Crypto"
             onChange={(e) => {
             setLook(e.target.value);}} 

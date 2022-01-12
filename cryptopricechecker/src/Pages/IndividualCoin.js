@@ -56,15 +56,15 @@ const IndividualCoin = () => {
             className="mb-2">
                     <Card.Body>
                         <Card.Title>{coin.name} information</Card.Title>
-                        <ListGroupItem>Date created: {coin.genesis_date}</ListGroupItem>
-                        <ListGroupItem>All time high:{Symbol}{coin.market_data.ath[currentMoney.toLowerCase()].toLocaleString()}</ListGroupItem>
-                        <ListGroupItem>Marketcap: {Symbol}{coin.market_data.market_cap[currentMoney.toLowerCase()].toLocaleString()} </ListGroupItem>
-                        <ListGroupItem>Total volume: {coin.market_data.total_volume[currentMoney.toLowerCase()].toLocaleString()}</ListGroupItem>    
-                        <ListGroupItem>24 hr high: {Symbol}{coin.market_data.high_24h[currentMoney.toLowerCase()].toLocaleString()}</ListGroupItem>
-                        <ListGroupItem>24 hr low: {Symbol}{coin.market_data.low_24h[currentMoney.toLowerCase()].toLocaleString()}</ListGroupItem>  
-                        <ListGroupItem>price change past 24hrs({Symbol}): {coin.market_data.price_change_24h_in_currency[currentMoney.toLowerCase()].toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</ListGroupItem>
-                        <ListGroupItem> {coin.market_data.total_supply === null? (<div>Total Supply is: &infin; </div>):(<div> Total Supply is: {coin.market_data.total_supply.toLocaleString()}</div>)}</ListGroupItem>
-                        <ListGroupItem> {coin.market_data.total_supply === null? (<div>Circulating Supply is: &infin; </div>):(<div> Circulating Supply is: {coin.market_data.circulating_supply.toLocaleString()}</div>)}</ListGroupItem>
+                        <Row className = "bg-dark text-white px-4">Date created: {coin.genesis_date}</Row>
+                        <Row className = "bg-dark text-white px-4">All time high: {Symbol}{coin.market_data.ath[currentMoney.toLowerCase()].toLocaleString()}</Row>
+                        <Row className = "bg-dark text-white px-4">Marketcap: {Symbol}{coin.market_data.market_cap[currentMoney.toLowerCase()].toLocaleString()} </Row>
+                        <Row className = "bg-dark text-white px-4">Total volume: {coin.market_data.total_volume[currentMoney.toLowerCase()].toLocaleString()}</Row>    
+                        <Row className = "bg-dark text-white px-4">24 hr high: {Symbol}{coin.market_data.high_24h[currentMoney.toLowerCase()].toLocaleString()}</Row>
+                        <Row className = "bg-dark text-white px-4">24 hr low: {Symbol}{coin.market_data.low_24h[currentMoney.toLowerCase()].toLocaleString()}</Row>  
+                        <Row className = "bg-dark text-white px-4">Price change past 24hrs: {Symbol}{coin.market_data.price_change_24h_in_currency[currentMoney.toLowerCase()].toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</Row>
+                        <Row className = "bg-dark text-white px-4">Total Supply is: {coin.market_data.total_supply === null ? "Infinite" : coin.market_data.total_supply.toLocaleString()}</Row>
+                        <Row className = "bg-dark text-white px-4">Circulating Supply is: {coin.market_data.total_supply === null ? "Infinite" : coin.market_data.circulating_supply.toLocaleString()}</Row>
                     </Card.Body>
             </Card>    
         </div>

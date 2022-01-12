@@ -7,7 +7,7 @@ function App() {
 
   return (
       <Router>
-        <div>
+        <div className="p-3 mb-2 bg-dark text-white">
         <Header />
           <Routes>
             <Route path ="/" element = {<Home/>} exact />

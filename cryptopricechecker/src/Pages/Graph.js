@@ -43,7 +43,7 @@ const Graph = ({coin}) => {
                 datasets:[{
                     data: graphData.map((coin) => coin[1]),
                     label: `Price from the past ${Day} day(s) in ${currentMoney}`,
-                    borderColor: "#262626",
+                    borderColor: "#f0f4f5",
                 },
                 ],
                 }}
@@ -61,7 +61,7 @@ const Graph = ({coin}) => {
                         <Button variant="dark" size = "sm" key={30} onClick={()=>{setDay(30)}}> 30 Days </Button> {' '}
                         <Button variant="dark" size = "sm" key={90} onClick={()=>{setDay(90)}}> 90 Days </Button> {' '} 
                         <Button variant="dark" size = "sm" key={365} onClick={()=>{setDay(365)}}> 1 Year </Button> {' '}
-                        <Button variant ="light"size ="lg" disabled ></Button> {' '}
+                        <Button variant ="dark"size ="lg" disabled ></Button> {' '}
                     </div>
                 </Container>
                 </>        

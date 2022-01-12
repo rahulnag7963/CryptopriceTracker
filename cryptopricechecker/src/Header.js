@@ -13,6 +13,7 @@ const Header = () => {
                     </Navbar.Brand>
             </Navbar>
             <Form.Select aria-label="Default select example"
+            className ="bg-dark text-white"
             value={currentMoney}
             onChange={(e) => newMoney (e.target.value)}>
                 <option>Choose a Currency</option>
