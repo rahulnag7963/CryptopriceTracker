@@ -67,29 +67,30 @@ const Coin = () => {
                         return(
                             <tr onClick={()=> nav(`/IndividualCoin/${row.id}`)}
                              key= {row.name}>
-                                <td>
+                                <td className= "col-2">
                                     <img
                                     src = {row?.image}
                                     alt = {row.name}
                                     height = "50"
+                                    margin-right= "0"
                                     />
-                                    <h3>{row.name}</h3>
+                                    <h3>{row.name}</h3> 
                                 </td>
-                                <td>
+                                <td className= "col-2">
                                 {Symbol}{" "}
                                 {row.market_cap.toLocaleString(undefined, {
                                 minimumFractionDigits: 2,
                                 maximumFractionDigits: 2
                                 })}
                                 </td>
-                                <td>
+                                <td className= "col-2">
                                 {Symbol}{" "}
                                 {row.current_price.toLocaleString(undefined, {
                                 minimumFractionDigits: 2,
                                 maximumFractionDigits: 2
                                 })}
                                 </td>
-                                <td>
+                                <td className= "col-2">
                                 { row.price_change_percentage_24h < 0 ? (
                                 <p class="text-danger">{row.price_change_percentage_24h.toFixed(2)}% / {row.price_change_24h.toFixed(2)}</p>): 
                                 
